@@ -12,7 +12,7 @@ module.exports = function(path, sum, next){
     if (err) next(err)
     
     let result = stdout.split(/\n/g).sort()
-    result = removeArr(result, 0)
+    result = removeArr(result)
     result = aa(result)
 
     next(null, result)
@@ -21,8 +21,8 @@ module.exports = function(path, sum, next){
 
 let removeArr = (arr, idx) => {
   let temp = []
-  arr.map((item, index) => {
-    if (index != idx) {
+  arr.map((item) => {
+    if (item.length > 2) {
       temp.push(item)
     }
   })
