@@ -1,0 +1,21 @@
+{
+  "name": "image-palette-dominant",
+  "version": "1.0.0",
+  "description": "Get dominant colors from image using imagemagick",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com:adeyahya/image-palette-dominant.git",
+    "type": "git"
+  },
+  "author": "Ade Yahya <adeyahyaprasetyo@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "colour",
+    "color",
+    "image",
+    "dominant"
+  ],
+  "bugs": {
+    "url": "https://github.com/shime/dominant-color/issues"
+  },
+}
