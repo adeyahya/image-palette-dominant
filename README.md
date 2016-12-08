@@ -1,4 +1,5 @@
 # image-palette-dominant
+[![Build Status](https://travis-ci.org/adeyahya/image-palette-dominant.svg?branch=master)](https://travis-ci.org/adeyahya/image-palette-dominant.svg?branch=master)
 
 Gets dominant color palette of an image using imagemagick
 
