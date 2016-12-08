@@ -7,6 +7,9 @@
     "url": "https://github.com:adeyahya/image-palette-dominant.git",
     "type": "git"
   },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test.js"
+  },
   "author": "Ade Yahya <adeyahyaprasetyo@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -18,4 +21,8 @@
   "bugs": {
     "url": "https://github.com:adeyahya/image-palette-dominant/issues"
   },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^1.21.5"
+  }
 }

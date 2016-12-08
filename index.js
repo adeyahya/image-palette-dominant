@@ -1,14 +1,12 @@
 const exec = require('child_process').exec;
 
-module.exports = function(path, opts, next){
-  if (typeof opts === 'function'){
-    next = opts
-    opts = undefined
+module.exports = function(path, sum, next){
+  if (typeof sum === 'function'){
+    next = sum
+    sum = 5
   }
   if (!next) next = function(){}
-  if (!opts) opts = {}
-  if (!opts.format) opts.format = 'hex'
-  var args = `convert ${path} -format %c -colorspace LAB -colors 5 histogram:info:- | sort -n -r`
+  var args = `convert ${path} -format %c -colorspace LAB -colors ${sum} histogram:info:- | sort -n -r`
   
   exec(args, function(err, stdout, stderr) {
     if (err) next(err)
@@ -38,7 +36,7 @@ let aa = (arr) => {
     let countRegex = /\w+(\:)/
     let hexRegex = /(\#)+\w+/
     result.push({
-      count: countRegex.exec(item)[0],
+      count: countRegex.exec(item)[0].replace(':',''),
       hex: hexRegex.exec(item)[0]
     })
   })
