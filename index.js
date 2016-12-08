@@ -1,4 +1,4 @@
-const exec = require('child_process').exec;
+const exec = require('exec')
 
 module.exports = function(path, sum, next){
   if (typeof sum === 'function'){
