@@ -1,4 +1,4 @@
-# dominant-color
+# image-palette-dominant
 
 Gets dominant color palette of an image using imagemagick
 
