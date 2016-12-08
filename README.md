@@ -1,37 +1,26 @@
 # dominant-color
 
-[![Build Status](https://travis-ci.org/shime/dominant-color.svg)](https://travis-ci.org/shime/dominant-color)
-
-Gets dominant color of an image. ~10 times faster than [color-thief](https://www.npmjs.org/package/color-thief) because it uses plain old [imagemagick](https://www.npmjs.org/package/imagemagick) instead of canvas.
+Gets dominant color palette of an image using imagemagick
 
 ## Installation
 
-    npm install dominant-color
+    npm install image-palette-dominant
 
 ## Example
 
 ```javascript
-var color   = require('dominant-color'),
+var ipd   = require('image-palette-dominant'),
     imgPath = './path/to/your/image.jpg'
 
-color(imgPath, function(err, color){
+ipd(imgPath, function(err, color){
   // hex color by default
   console.log(color) // '5b6c6e'
 })
 
-color(imgPath, {format: 'rgb'}, function(err, color){
-  console.log(color) // ['91', '108', '110']
+ipd(imgPath, {format: 'rgb'}, function(err, color){
+  console.log(color) // [{count: '233234', hex: '#000'}, {...}]
 })
 ```
-
-Options: 
-
-* `format` - 'hex' or 'rgb', defaults to 'hex'
-
-## Alternatives
-
-* [color-thief](https://www.npmjs.org/package/color-thief)
-* [colour-extractor](https://www.npmjs.org/package/colour-extractor)
 
 ## License
 
