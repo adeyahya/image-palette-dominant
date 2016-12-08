@@ -1,6 +1,7 @@
 var ipd  = require('./'),
+		path = require('path'),
     expect  = require('expect.js'),
-    imgPath = './purr.jpg'
+    imgPath = path.join(__dirname, 'purr.jpg')
 
 describe('dominant-colour', function(){
   it('works', function(done){
